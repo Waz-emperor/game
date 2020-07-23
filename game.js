@@ -18,7 +18,7 @@ function addItems() {
   createItem(375, 400, 'coin');
   createItem(375, 100, 'poison');
   createItem(100, 375, 'poison');
-  createItem(125, 50, 'star');
+  createItem(450, 200, 'star');
 }
 
 // add platforms to the game
@@ -42,7 +42,7 @@ function createItem(left, top, image) {
 // create the winning badge and add to screen
 function createBadge() {
   badges = game.add.physicsGroup();
-  var badge = badges.create(410, 370, 'badge');
+  var badge = badges.create(125, 50, 'badge');
   badge.animations.add('spin');
   badge.animations.play('spin', 10, true);
 }
@@ -55,7 +55,7 @@ function itemHandler(player, item) {
   } else if (item.key === 'poison') {
      currentScore = currentScore - 25;
   } else if (item.key === 'star') {
-     platforms.create(455, 200, "platform2");
+     platforms.create(100, 100, "platform2");
        platforms.setAll('body.immovable', true);
   }
   if (currentScore === winningScore) {
