@@ -26,10 +26,10 @@ function addItems() {
 function addPlatforms() {
   platforms = game.add.physicsGroup();
   platforms.create(450, 550, 'platform');
-  platforms.create(300, 350, 'platform');
-  platforms.create(400, 150, 'platform');
+  platforms.create(300, 250, 'platform');
+  platforms.create(400, 350, 'platform');
   platforms.create(400, 550, 'platform');
-  platforms.create(450, 550, 'platform');
+  platforms.create(500, 550, 'platform');
   platforms.setAll('body.immovable', true);
 }
 
@@ -43,7 +43,7 @@ function createItem(left, top, image) {
 // create the winning badge and add to screen
 function createBadge() {
   badges = game.add.physicsGroup();
-  var badge = badges.create(750, 400, 'badge');
+  var badge = badges.create(410, 370, 'badge');
   badge.animations.add('spin');
   badge.animations.play('spin', 10, true);
 }
